@@ -1,0 +1,43 @@
+{
+  "pack_name": "LEDERG STALKER",
+  "pack_version": "1.1.0",
+  "minecraft": "1.12.2",
+  "forge": "14.23.5.2861",
+  "server": "LEDERG05.aternos.me:26820",
+  "mods": [
+    {
+      "file": "CustomMainMenu_MC1.12.2_2.0.8.jar",
+      "role": "Custom server-only main menu"
+    },
+    {
+      "file": "SovietEra-0.6-1.12.2.jar",
+      "role": "Soviet-era content"
+    },
+    {
+      "file": "VanillaFix-1.0.10-150.jar",
+      "role": "Client stability fixes"
+    },
+    {
+      "file": "DynamicSurroundings-1.12.2-3.6.3.jar",
+      "role": "Atmospheric sound and fog",
+      "url": "https://www.curseforge.com/minecraft/mc-mods/dynamic-surroundings/files/3497269"
+    },
+    {
+      "file": "OreLib-1.12.2-3.6.0.1.jar",
+      "role": "Dependency for Dynamic Surroundings",
+      "url": "https://www.curseforge.com/minecraft/mc-mods/orelib/files/2820815"
+    },
+    {
+      "file": "BetterFoliage-MC1.12-2.3.3.jar",
+      "role": "Cosmetic foliage",
+      "url": "https://www.curseforge.com/minecraft/mc-mods/better-foliage/files/3393955"
+    },
+    {
+      "file": "Forgelin-1.8.3.jar",
+      "role": "Dependency for Better Foliage",
+      "url": "https://www.curseforge.com/minecraft/mc-mods/shadowfacts-forgelin/files/2727070"
+    }
+  ],
+  "contains_minecraft_binaries": false,
+  "contains_tlauncher_files": false
+}

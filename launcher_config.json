@@ -1,8 +1,12 @@
 {
-  "name": "LEDERG STALKER",
+  "app_name": "LEDERG STALKER",
+  "app_version": "1.1.0",
   "minecraft_version": "1.12.2",
-  "forge_profile": "Forge 1.12.2",
+  "forge_build": "14.23.5.2861",
   "server_host": "LEDERG05.aternos.me",
   "server_port": 26820,
-  "client_url": ""
+  "modpack_url": "",
+  "microsoft_client_id": "",
+  "redirect_uri": "http://localhost:8765/callback",
+  "note": "Downloads only the modpack from Drive. Minecraft is installed from official metadata after Microsoft authentication."
 }
