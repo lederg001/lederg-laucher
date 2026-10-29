@@ -1,0 +1,41 @@
+name: Build LEDERG Launcher
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install build tools
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+      - name: Run tests
+        run: python -m pytest -q
+      - name: Build EXE
+        run: python -m PyInstaller --clean --noconfirm --onefile --windowed --name LEDERG-Launcher --add-data "launcher_config.json;." launcher.py
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LEDERG-Launcher-Windows
+          path: dist/LEDERG-Launcher.exe
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish GitHub Release
+        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0
+          name: LEDERG Launcher v1.0.0
+          body: |
+            LEDERG STALKER launcher for Minecraft Forge 1.12.2.
+            Open the public Google Drive link in a browser, then select the downloaded ZIP to install it.
+            TLauncher sign-in may be required before playing.
+          files: dist/LEDERG-Launcher.exe
+          make_latest: true
