@@ -116,7 +116,7 @@ def validate_modpack(archive_path: Path) -> list[str]:
             first = rel.parts[0].lower()
             if first in FORBIDDEN_ROOTS:
                 raise ValueError(f"ZIP содержит файлы Minecraft, а должен содержать только моды: {first}/")
-            if first not in ALLOWED_TOP:
+            if first not in {item.lower() for item in ALLOWED_TOP}:
                 raise ValueError(f"Неожиданная папка в модпаке: {rel.parts[0]}")
             low = rel.name.lower()
             if low in FORBIDDEN_NAMES or low.startswith("tlauncher") or "tl_skincape" in low:
