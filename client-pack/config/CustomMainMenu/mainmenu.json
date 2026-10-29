@@ -1,14 +1,5 @@
 {
-  "images": {
-    "title": {
-      "image": "custommainmenu:textures/gui/minecraft.png",
-      "posX": -137,
-      "posY": 18,
-      "width": 512,
-      "height": 512,
-      "alignment": "top_center"
-    }
-  },
+  "images": {},
   "buttons": {
     "mods": {
       "text": "МОДЫ",
@@ -58,26 +49,6 @@
       }
     }
   },
-  "labels": {
-    "lederg_brand": {
-      "text": "LEDERG STALKER  /  PRIPYAT",
-      "posX": 0,
-      "posY": 15,
-      "fontSize": 1.2,
-      "color": -65536,
-      "hoverColor": -65536,
-      "alignment": "top_center"
-    },
-    "lederg_server": {
-      "text": "LEDERG05.aternos.me:26820",
-      "posX": 0,
-      "posY": -8,
-      "fontSize": 0.8,
-      "color": -1,
-      "hoverColor": -1,
-      "alignment": "bottom_center"
-    }
-  },
   "other": {
     "panorama": {
       "images": "minecraft:textures/gui/title/background/panorama_%c.png",
@@ -85,6 +56,22 @@
       "animationSpeed": 1,
       "blur": true,
       "gradient": true
+    }
+  },
+  "texts": {
+    "lederg_brand": {
+      "text": "LEDERG STALKER  /  PRIPYAT",
+      "posX": 0,
+      "posY": 15,
+      "color": -65536,
+      "alignment": "top_center"
+    },
+    "lederg_server": {
+      "text": "LEDERG05.aternos.me:26820",
+      "posX": 0,
+      "posY": -8,
+      "color": -1,
+      "alignment": "bottom_center"
     }
   }
 }
