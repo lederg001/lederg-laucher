@@ -484,7 +484,8 @@ def build_launch_options(profile: dict, java_path: Path, game_dir: Path) -> dict
 class LauncherUI:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("LEDERG STALKER | Independent Launcher")
+        alias = str(self.settings.get("display_alias", "")).strip()
+        self.root.title("LEDERG STALKER | " + (alias or "Independent Launcher"))
         self.root.geometry("850x680")
         self.root.minsize(780, 630)
         self.root.configure(bg="#080808")
@@ -559,6 +560,7 @@ class LauncherUI:
             return False
         self.settings.update({"modpack_url": url, "microsoft_client_id": client_id, "display_alias": alias})
         save_settings(self.settings)
+        self.root.title("LEDERG STALKER | " + (alias or "Independent Launcher"))
         self.status.set("НАСТРОЙКИ СОХРАНЕНЫ ЛОКАЛЬНО")
         return True
 
